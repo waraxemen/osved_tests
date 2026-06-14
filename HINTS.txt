@@ -1,0 +1,21 @@
+# Разрешить выполнение сценариев в Windows:
+Открываем терминал от админа. 
+Set-ExecutionPolicy RemoteSigned 
+На вопрос отвечаем: A (Да для всех)
+
+# upgrade pip: python.exe -m pip install --upgrade pip
+
+# Создание виртуальной среды Python на Windows без pip (пайтон должен быть уже установлен и добавлен в PATH)
+python -m venv .venv   
+.\.venv\Scripts\Activate.ps1
+
+# Для деактивации виртуального окружения
+deactivate
+
+# Сохранение списка зависимостей в файле requirements.txt
+pip freeze > requirements.txt
+
+# Установка зависимостей из списка в requirements.txt
+pip install -r requirements.txt
+# Если ругается на самоподписанный сертификат, то так:
+pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org

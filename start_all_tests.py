@@ -112,4 +112,4 @@ if __name__ == '__main__':
 
 
 # для запуска в терминале:
-# python3 start_all_tests.py
+# python start_all_tests.py

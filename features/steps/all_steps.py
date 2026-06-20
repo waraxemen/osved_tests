@@ -2,11 +2,17 @@ from behave import given, when, then
 import config
 import time
 
+from features.helpers.restore import restore_database
+
 IP = config.IP
 
 @Given('Открываем браузер') # type: ignore
 def open_browser(context):
     context.page.goto(f"http://{IP}")
+
+@Given('Восстанавливаем БД из бэкапа') # type: ignore
+def step_restore_db(context):
+    restore_database()
 
 @Given('Ждём "{timeout}" сек.') # type: ignore
 def wait(context, timeout):

@@ -1,8 +1,11 @@
 # адрес сервера
 IP = "localhost:8095"
 
+# актуальная версия PostgreSQL
+PG_BIN = r"C:\Program Files\PostgreSQL\9.6\bin"
+
 # путь к бэкапу
-DUMP = r"backups/dump-svitok_osvedomlennost-20260618.backup"
+DUMP = r"backups/dump-svitok_osvedomlennost.backup"
 
 # адрес и имя БД
 DB_IP = "localhost"

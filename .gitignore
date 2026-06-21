@@ -1,2 +1,6 @@
 .venv/
 test_log.txt
+**/__pycache__/
+*.pyc
+*.pyo
+config.py

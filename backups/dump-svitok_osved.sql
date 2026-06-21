@@ -2,12 +2,10 @@
 -- PostgreSQL database dump
 --
 
-\restrict Q8c5RWj9XlduAodrb822eVOzYfAZ4xsEh05OjQDSvWZ5XvyPdgwD07phJdO5EDF
+-- Dumped from database version 9.6.24
+-- Dumped by pg_dump version 9.6.24
 
--- Dumped from database version 13.23
--- Dumped by pg_dump version 13.23
-
--- Started on 2026-06-21 12:33:18
+-- Started on 2026-06-21 13:11:50
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,12 +18,29 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-SET default_tablespace = '';
+--
+-- TOC entry 1 (class 3079 OID 12387)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
 
-SET default_table_access_method = heap;
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
 
 --
--- TOC entry 200 (class 1259 OID 18658)
+-- TOC entry 2335 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 185 (class 1259 OID 199801)
 -- Name: audit_logs; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -43,7 +58,7 @@ CREATE TABLE public.audit_logs (
 ALTER TABLE public.audit_logs OWNER TO postgres;
 
 --
--- TOC entry 201 (class 1259 OID 18664)
+-- TOC entry 186 (class 1259 OID 199807)
 -- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -58,8 +73,8 @@ CREATE SEQUENCE public.audit_logs_id_seq
 ALTER TABLE public.audit_logs_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3195 (class 0 OID 0)
--- Dependencies: 201
+-- TOC entry 2336 (class 0 OID 0)
+-- Dependencies: 186
 -- Name: audit_logs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -67,7 +82,7 @@ ALTER SEQUENCE public.audit_logs_id_seq OWNED BY public.audit_logs.id;
 
 
 --
--- TOC entry 202 (class 1259 OID 18666)
+-- TOC entry 187 (class 1259 OID 199809)
 -- Name: awareness_records; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -87,7 +102,7 @@ CREATE TABLE public.awareness_records (
 ALTER TABLE public.awareness_records OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 18669)
+-- TOC entry 188 (class 1259 OID 199812)
 -- Name: awareness_records_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -102,8 +117,8 @@ CREATE SEQUENCE public.awareness_records_id_seq
 ALTER TABLE public.awareness_records_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3196 (class 0 OID 0)
--- Dependencies: 203
+-- TOC entry 2337 (class 0 OID 0)
+-- Dependencies: 188
 -- Name: awareness_records_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -111,7 +126,7 @@ ALTER SEQUENCE public.awareness_records_id_seq OWNED BY public.awareness_records
 
 
 --
--- TOC entry 204 (class 1259 OID 18671)
+-- TOC entry 189 (class 1259 OID 199814)
 -- Name: clearance_forms; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -126,7 +141,7 @@ CREATE TABLE public.clearance_forms (
 ALTER TABLE public.clearance_forms OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 18676)
+-- TOC entry 190 (class 1259 OID 199819)
 -- Name: clearance_forms_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -141,8 +156,8 @@ CREATE SEQUENCE public.clearance_forms_id_seq
 ALTER TABLE public.clearance_forms_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3197 (class 0 OID 0)
--- Dependencies: 205
+-- TOC entry 2338 (class 0 OID 0)
+-- Dependencies: 190
 -- Name: clearance_forms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -150,7 +165,7 @@ ALTER SEQUENCE public.clearance_forms_id_seq OWNED BY public.clearance_forms.id;
 
 
 --
--- TOC entry 206 (class 1259 OID 18678)
+-- TOC entry 191 (class 1259 OID 199821)
 -- Name: departments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -163,7 +178,7 @@ CREATE TABLE public.departments (
 ALTER TABLE public.departments OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 18681)
+-- TOC entry 192 (class 1259 OID 199824)
 -- Name: departments_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -178,8 +193,8 @@ CREATE SEQUENCE public.departments_id_seq
 ALTER TABLE public.departments_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3198 (class 0 OID 0)
--- Dependencies: 207
+-- TOC entry 2339 (class 0 OID 0)
+-- Dependencies: 192
 -- Name: departments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -187,7 +202,7 @@ ALTER SEQUENCE public.departments_id_seq OWNED BY public.departments.id;
 
 
 --
--- TOC entry 208 (class 1259 OID 18683)
+-- TOC entry 193 (class 1259 OID 199826)
 -- Name: document_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -200,7 +215,7 @@ CREATE TABLE public.document_types (
 ALTER TABLE public.document_types OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 18686)
+-- TOC entry 194 (class 1259 OID 199829)
 -- Name: document_types_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -215,8 +230,8 @@ CREATE SEQUENCE public.document_types_id_seq
 ALTER TABLE public.document_types_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3199 (class 0 OID 0)
--- Dependencies: 209
+-- TOC entry 2340 (class 0 OID 0)
+-- Dependencies: 194
 -- Name: document_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -224,7 +239,7 @@ ALTER SEQUENCE public.document_types_id_seq OWNED BY public.document_types.id;
 
 
 --
--- TOC entry 210 (class 1259 OID 18688)
+-- TOC entry 195 (class 1259 OID 199831)
 -- Name: documents; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -246,7 +261,7 @@ CREATE TABLE public.documents (
 ALTER TABLE public.documents OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 18694)
+-- TOC entry 196 (class 1259 OID 199837)
 -- Name: documents_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -261,8 +276,8 @@ CREATE SEQUENCE public.documents_id_seq
 ALTER TABLE public.documents_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3200 (class 0 OID 0)
--- Dependencies: 211
+-- TOC entry 2341 (class 0 OID 0)
+-- Dependencies: 196
 -- Name: documents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -270,7 +285,7 @@ ALTER SEQUENCE public.documents_id_seq OWNED BY public.documents.id;
 
 
 --
--- TOC entry 212 (class 1259 OID 18696)
+-- TOC entry 197 (class 1259 OID 199839)
 -- Name: employees; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -306,7 +321,7 @@ CREATE TABLE public.employees (
 ALTER TABLE public.employees OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 18703)
+-- TOC entry 198 (class 1259 OID 199846)
 -- Name: employees_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -321,8 +336,8 @@ CREATE SEQUENCE public.employees_id_seq
 ALTER TABLE public.employees_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3201 (class 0 OID 0)
--- Dependencies: 213
+-- TOC entry 2342 (class 0 OID 0)
+-- Dependencies: 198
 -- Name: employees_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -330,7 +345,7 @@ ALTER SEQUENCE public.employees_id_seq OWNED BY public.employees.id;
 
 
 --
--- TOC entry 214 (class 1259 OID 18705)
+-- TOC entry 199 (class 1259 OID 199848)
 -- Name: licenses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -352,7 +367,7 @@ CREATE TABLE public.licenses (
 ALTER TABLE public.licenses OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 18713)
+-- TOC entry 200 (class 1259 OID 199856)
 -- Name: licenses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -367,8 +382,8 @@ CREATE SEQUENCE public.licenses_id_seq
 ALTER TABLE public.licenses_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3202 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 2343 (class 0 OID 0)
+-- Dependencies: 200
 -- Name: licenses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -376,7 +391,7 @@ ALTER SEQUENCE public.licenses_id_seq OWNED BY public.licenses.id;
 
 
 --
--- TOC entry 216 (class 1259 OID 18715)
+-- TOC entry 201 (class 1259 OID 199858)
 -- Name: organizations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -389,7 +404,7 @@ CREATE TABLE public.organizations (
 ALTER TABLE public.organizations OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 18718)
+-- TOC entry 202 (class 1259 OID 199861)
 -- Name: organizations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -404,8 +419,8 @@ CREATE SEQUENCE public.organizations_id_seq
 ALTER TABLE public.organizations_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3203 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 2344 (class 0 OID 0)
+-- Dependencies: 202
 -- Name: organizations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -413,7 +428,7 @@ ALTER SEQUENCE public.organizations_id_seq OWNED BY public.organizations.id;
 
 
 --
--- TOC entry 218 (class 1259 OID 18720)
+-- TOC entry 203 (class 1259 OID 199863)
 -- Name: positions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -426,7 +441,7 @@ CREATE TABLE public.positions (
 ALTER TABLE public.positions OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 18723)
+-- TOC entry 204 (class 1259 OID 199866)
 -- Name: positions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -441,8 +456,8 @@ CREATE SEQUENCE public.positions_id_seq
 ALTER TABLE public.positions_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3204 (class 0 OID 0)
--- Dependencies: 219
+-- TOC entry 2345 (class 0 OID 0)
+-- Dependencies: 204
 -- Name: positions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -450,7 +465,7 @@ ALTER SEQUENCE public.positions_id_seq OWNED BY public.positions.id;
 
 
 --
--- TOC entry 220 (class 1259 OID 18725)
+-- TOC entry 205 (class 1259 OID 199868)
 -- Name: security_grades; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -465,7 +480,7 @@ CREATE TABLE public.security_grades (
 ALTER TABLE public.security_grades OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 18730)
+-- TOC entry 206 (class 1259 OID 199873)
 -- Name: security_grades_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -480,8 +495,8 @@ CREATE SEQUENCE public.security_grades_id_seq
 ALTER TABLE public.security_grades_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3205 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 2346 (class 0 OID 0)
+-- Dependencies: 206
 -- Name: security_grades_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -489,7 +504,7 @@ ALTER SEQUENCE public.security_grades_id_seq OWNED BY public.security_grades.id;
 
 
 --
--- TOC entry 222 (class 1259 OID 18732)
+-- TOC entry 207 (class 1259 OID 199875)
 -- Name: system_migrations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -503,7 +518,7 @@ CREATE TABLE public.system_migrations (
 ALTER TABLE public.system_migrations OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 18735)
+-- TOC entry 208 (class 1259 OID 199878)
 -- Name: system_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -518,8 +533,8 @@ CREATE SEQUENCE public.system_migrations_id_seq
 ALTER TABLE public.system_migrations_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3206 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 2347 (class 0 OID 0)
+-- Dependencies: 208
 -- Name: system_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -527,7 +542,7 @@ ALTER SEQUENCE public.system_migrations_id_seq OWNED BY public.system_migrations
 
 
 --
--- TOC entry 224 (class 1259 OID 18737)
+-- TOC entry 209 (class 1259 OID 199880)
 -- Name: travelers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -548,7 +563,7 @@ CREATE TABLE public.travelers (
 ALTER TABLE public.travelers OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 18741)
+-- TOC entry 210 (class 1259 OID 199884)
 -- Name: travelers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -563,8 +578,8 @@ CREATE SEQUENCE public.travelers_id_seq
 ALTER TABLE public.travelers_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3207 (class 0 OID 0)
--- Dependencies: 225
+-- TOC entry 2348 (class 0 OID 0)
+-- Dependencies: 210
 -- Name: travelers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -572,7 +587,7 @@ ALTER SEQUENCE public.travelers_id_seq OWNED BY public.travelers.id;
 
 
 --
--- TOC entry 226 (class 1259 OID 18743)
+-- TOC entry 211 (class 1259 OID 199886)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -592,7 +607,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 227 (class 1259 OID 18752)
+-- TOC entry 212 (class 1259 OID 199895)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -607,8 +622,8 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3208 (class 0 OID 0)
--- Dependencies: 227
+-- TOC entry 2349 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -616,7 +631,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- TOC entry 2933 (class 2604 OID 18754)
+-- TOC entry 2084 (class 2604 OID 199897)
 -- Name: audit_logs id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -624,7 +639,7 @@ ALTER TABLE ONLY public.audit_logs ALTER COLUMN id SET DEFAULT nextval('public.a
 
 
 --
--- TOC entry 2934 (class 2604 OID 18755)
+-- TOC entry 2085 (class 2604 OID 199898)
 -- Name: awareness_records id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -632,7 +647,7 @@ ALTER TABLE ONLY public.awareness_records ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2937 (class 2604 OID 18756)
+-- TOC entry 2088 (class 2604 OID 199899)
 -- Name: clearance_forms id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -640,7 +655,7 @@ ALTER TABLE ONLY public.clearance_forms ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2938 (class 2604 OID 18757)
+-- TOC entry 2089 (class 2604 OID 199900)
 -- Name: departments id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -648,7 +663,7 @@ ALTER TABLE ONLY public.departments ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2939 (class 2604 OID 18758)
+-- TOC entry 2090 (class 2604 OID 199901)
 -- Name: document_types id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -656,7 +671,7 @@ ALTER TABLE ONLY public.document_types ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 2940 (class 2604 OID 18759)
+-- TOC entry 2091 (class 2604 OID 199902)
 -- Name: documents id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -664,7 +679,7 @@ ALTER TABLE ONLY public.documents ALTER COLUMN id SET DEFAULT nextval('public.do
 
 
 --
--- TOC entry 2942 (class 2604 OID 18760)
+-- TOC entry 2093 (class 2604 OID 199903)
 -- Name: employees id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -672,7 +687,7 @@ ALTER TABLE ONLY public.employees ALTER COLUMN id SET DEFAULT nextval('public.em
 
 
 --
--- TOC entry 2945 (class 2604 OID 18761)
+-- TOC entry 2096 (class 2604 OID 199904)
 -- Name: licenses id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -680,7 +695,7 @@ ALTER TABLE ONLY public.licenses ALTER COLUMN id SET DEFAULT nextval('public.lic
 
 
 --
--- TOC entry 2946 (class 2604 OID 18762)
+-- TOC entry 2097 (class 2604 OID 199905)
 -- Name: organizations id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -688,7 +703,7 @@ ALTER TABLE ONLY public.organizations ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2947 (class 2604 OID 18763)
+-- TOC entry 2098 (class 2604 OID 199906)
 -- Name: positions id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -696,7 +711,7 @@ ALTER TABLE ONLY public.positions ALTER COLUMN id SET DEFAULT nextval('public.po
 
 
 --
--- TOC entry 2950 (class 2604 OID 18764)
+-- TOC entry 2101 (class 2604 OID 199907)
 -- Name: security_grades id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -704,7 +719,7 @@ ALTER TABLE ONLY public.security_grades ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2951 (class 2604 OID 18765)
+-- TOC entry 2102 (class 2604 OID 199908)
 -- Name: system_migrations id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -712,7 +727,7 @@ ALTER TABLE ONLY public.system_migrations ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2953 (class 2604 OID 18766)
+-- TOC entry 2104 (class 2604 OID 199909)
 -- Name: travelers id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -720,7 +735,7 @@ ALTER TABLE ONLY public.travelers ALTER COLUMN id SET DEFAULT nextval('public.tr
 
 
 --
--- TOC entry 2957 (class 2604 OID 18767)
+-- TOC entry 2108 (class 2604 OID 199910)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -728,19 +743,29 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
--- TOC entry 3162 (class 0 OID 18658)
--- Dependencies: 200
+-- TOC entry 2300 (class 0 OID 199801)
+-- Dependencies: 185
 -- Data for Name: audit_logs; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.audit_logs (id, user_id, action, entity_type, entity_id, details, created_at) FROM stdin;
 1	1	login	user	1		2026-06-20 17:39:21.542622+03
+2	1	login	user	1		2026-06-21 13:10:48.126578+03
 \.
 
 
 --
--- TOC entry 3164 (class 0 OID 18666)
--- Dependencies: 202
+-- TOC entry 2350 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: audit_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.audit_logs_id_seq', 2, true);
+
+
+--
+-- TOC entry 2302 (class 0 OID 199809)
+-- Dependencies: 187
 -- Data for Name: awareness_records; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -13074,8 +13099,17 @@ COPY public.awareness_records (id, employee_id, traveler_id, document_id, acquai
 
 
 --
--- TOC entry 3166 (class 0 OID 18671)
--- Dependencies: 204
+-- TOC entry 2351 (class 0 OID 0)
+-- Dependencies: 188
+-- Name: awareness_records_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.awareness_records_id_seq', 12325, true);
+
+
+--
+-- TOC entry 2304 (class 0 OID 199814)
+-- Dependencies: 189
 -- Data for Name: clearance_forms; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -13088,8 +13122,17 @@ COPY public.clearance_forms (id, name, level, is_system) FROM stdin;
 
 
 --
--- TOC entry 3168 (class 0 OID 18678)
--- Dependencies: 206
+-- TOC entry 2352 (class 0 OID 0)
+-- Dependencies: 190
+-- Name: clearance_forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.clearance_forms_id_seq', 4, true);
+
+
+--
+-- TOC entry 2306 (class 0 OID 199821)
+-- Dependencies: 191
 -- Data for Name: departments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -13118,8 +13161,17 @@ COPY public.departments (id, name) FROM stdin;
 
 
 --
--- TOC entry 3170 (class 0 OID 18683)
--- Dependencies: 208
+-- TOC entry 2353 (class 0 OID 0)
+-- Dependencies: 192
+-- Name: departments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.departments_id_seq', 20, true);
+
+
+--
+-- TOC entry 2308 (class 0 OID 199826)
+-- Dependencies: 193
 -- Data for Name: document_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -13133,8 +13185,17 @@ COPY public.document_types (id, name) FROM stdin;
 
 
 --
--- TOC entry 3172 (class 0 OID 18688)
--- Dependencies: 210
+-- TOC entry 2354 (class 0 OID 0)
+-- Dependencies: 194
+-- Name: document_types_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.document_types_id_seq', 5, true);
+
+
+--
+-- TOC entry 2310 (class 0 OID 199831)
+-- Dependencies: 195
 -- Data for Name: documents; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -20203,8 +20264,17 @@ COPY public.documents (id, number, doc_date, document_type_id, summary, security
 
 
 --
--- TOC entry 3174 (class 0 OID 18696)
--- Dependencies: 212
+-- TOC entry 2355 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.documents_id_seq', 7060, true);
+
+
+--
+-- TOC entry 2312 (class 0 OID 199839)
+-- Dependencies: 197
 -- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21713,8 +21783,17 @@ COPY public.employees (id, uid, last_name, first_name, middle_name, position_id,
 
 
 --
--- TOC entry 3176 (class 0 OID 18705)
--- Dependencies: 214
+-- TOC entry 2356 (class 0 OID 0)
+-- Dependencies: 198
+-- Name: employees_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.employees_id_seq', 1500, true);
+
+
+--
+-- TOC entry 2314 (class 0 OID 199848)
+-- Dependencies: 199
 -- Data for Name: licenses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21724,8 +21803,17 @@ COPY public.licenses (id, license_key, license_number, hardware_id, organization
 
 
 --
--- TOC entry 3178 (class 0 OID 18715)
--- Dependencies: 216
+-- TOC entry 2357 (class 0 OID 0)
+-- Dependencies: 200
+-- Name: licenses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.licenses_id_seq', 1, true);
+
+
+--
+-- TOC entry 2316 (class 0 OID 199858)
+-- Dependencies: 201
 -- Data for Name: organizations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21746,8 +21834,17 @@ COPY public.organizations (id, name) FROM stdin;
 
 
 --
--- TOC entry 3180 (class 0 OID 18720)
--- Dependencies: 218
+-- TOC entry 2358 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: organizations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.organizations_id_seq', 12, true);
+
+
+--
+-- TOC entry 2318 (class 0 OID 199863)
+-- Dependencies: 203
 -- Data for Name: positions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21779,8 +21876,17 @@ COPY public.positions (id, name) FROM stdin;
 
 
 --
--- TOC entry 3182 (class 0 OID 18725)
--- Dependencies: 220
+-- TOC entry 2359 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: positions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.positions_id_seq', 23, true);
+
+
+--
+-- TOC entry 2320 (class 0 OID 199868)
+-- Dependencies: 205
 -- Data for Name: security_grades; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21794,8 +21900,17 @@ COPY public.security_grades (id, name, level, is_system) FROM stdin;
 
 
 --
--- TOC entry 3184 (class 0 OID 18732)
--- Dependencies: 222
+-- TOC entry 2360 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: security_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.security_grades_id_seq', 5, true);
+
+
+--
+-- TOC entry 2322 (class 0 OID 199875)
+-- Dependencies: 207
 -- Data for Name: system_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21806,8 +21921,17 @@ COPY public.system_migrations (id, name, run_at) FROM stdin;
 
 
 --
--- TOC entry 3186 (class 0 OID 18737)
--- Dependencies: 224
+-- TOC entry 2361 (class 0 OID 0)
+-- Dependencies: 208
+-- Name: system_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.system_migrations_id_seq', 2, true);
+
+
+--
+-- TOC entry 2324 (class 0 OID 199880)
+-- Dependencies: 209
 -- Data for Name: travelers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21859,8 +21983,17 @@ COPY public.travelers (id, last_name, first_name, middle_name, organization_id, 
 
 
 --
--- TOC entry 3188 (class 0 OID 18743)
--- Dependencies: 226
+-- TOC entry 2362 (class 0 OID 0)
+-- Dependencies: 210
+-- Name: travelers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.travelers_id_seq', 43, true);
+
+
+--
+-- TOC entry 2326 (class 0 OID 199886)
+-- Dependencies: 211
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -21870,133 +22003,16 @@ COPY public.users (id, login, password, full_name, role, is_active, is_blocked, 
 
 
 --
--- TOC entry 3209 (class 0 OID 0)
--- Dependencies: 201
--- Name: audit_logs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.audit_logs_id_seq', 1, true);
-
-
---
--- TOC entry 3210 (class 0 OID 0)
--- Dependencies: 203
--- Name: awareness_records_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.awareness_records_id_seq', 12325, true);
-
-
---
--- TOC entry 3211 (class 0 OID 0)
--- Dependencies: 205
--- Name: clearance_forms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.clearance_forms_id_seq', 4, true);
-
-
---
--- TOC entry 3212 (class 0 OID 0)
--- Dependencies: 207
--- Name: departments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.departments_id_seq', 20, true);
-
-
---
--- TOC entry 3213 (class 0 OID 0)
--- Dependencies: 209
--- Name: document_types_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.document_types_id_seq', 5, true);
-
-
---
--- TOC entry 3214 (class 0 OID 0)
--- Dependencies: 211
--- Name: documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.documents_id_seq', 7060, true);
-
-
---
--- TOC entry 3215 (class 0 OID 0)
--- Dependencies: 213
--- Name: employees_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.employees_id_seq', 1500, true);
-
-
---
--- TOC entry 3216 (class 0 OID 0)
--- Dependencies: 215
--- Name: licenses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.licenses_id_seq', 1, true);
-
-
---
--- TOC entry 3217 (class 0 OID 0)
--- Dependencies: 217
--- Name: organizations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.organizations_id_seq', 12, true);
-
-
---
--- TOC entry 3218 (class 0 OID 0)
--- Dependencies: 219
--- Name: positions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.positions_id_seq', 23, true);
-
-
---
--- TOC entry 3219 (class 0 OID 0)
--- Dependencies: 221
--- Name: security_grades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.security_grades_id_seq', 5, true);
-
-
---
--- TOC entry 3220 (class 0 OID 0)
--- Dependencies: 223
--- Name: system_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.system_migrations_id_seq', 2, true);
-
-
---
--- TOC entry 3221 (class 0 OID 0)
--- Dependencies: 225
--- Name: travelers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.travelers_id_seq', 43, true);
-
-
---
--- TOC entry 3222 (class 0 OID 0)
--- Dependencies: 227
+-- TOC entry 2363 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 2, true);
+SELECT pg_catalog.setval('public.users_id_seq', 3, true);
 
 
 --
--- TOC entry 2959 (class 2606 OID 18769)
+-- TOC entry 2110 (class 2606 OID 199912)
 -- Name: audit_logs audit_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22005,7 +22021,7 @@ ALTER TABLE ONLY public.audit_logs
 
 
 --
--- TOC entry 2969 (class 2606 OID 18771)
+-- TOC entry 2120 (class 2606 OID 199914)
 -- Name: awareness_records awareness_records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22014,7 +22030,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 2975 (class 2606 OID 18773)
+-- TOC entry 2126 (class 2606 OID 199916)
 -- Name: clearance_forms clearance_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22023,7 +22039,7 @@ ALTER TABLE ONLY public.clearance_forms
 
 
 --
--- TOC entry 2978 (class 2606 OID 18775)
+-- TOC entry 2129 (class 2606 OID 199918)
 -- Name: departments departments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22032,7 +22048,7 @@ ALTER TABLE ONLY public.departments
 
 
 --
--- TOC entry 2981 (class 2606 OID 18777)
+-- TOC entry 2132 (class 2606 OID 199920)
 -- Name: document_types document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22041,7 +22057,7 @@ ALTER TABLE ONLY public.document_types
 
 
 --
--- TOC entry 2984 (class 2606 OID 18779)
+-- TOC entry 2135 (class 2606 OID 199922)
 -- Name: documents documents_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22050,7 +22066,7 @@ ALTER TABLE ONLY public.documents
 
 
 --
--- TOC entry 2989 (class 2606 OID 18781)
+-- TOC entry 2140 (class 2606 OID 199924)
 -- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22059,7 +22075,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2996 (class 2606 OID 18783)
+-- TOC entry 2147 (class 2606 OID 199926)
 -- Name: licenses licenses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22068,7 +22084,7 @@ ALTER TABLE ONLY public.licenses
 
 
 --
--- TOC entry 2999 (class 2606 OID 18785)
+-- TOC entry 2150 (class 2606 OID 199928)
 -- Name: organizations organizations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22077,7 +22093,7 @@ ALTER TABLE ONLY public.organizations
 
 
 --
--- TOC entry 3002 (class 2606 OID 18787)
+-- TOC entry 2153 (class 2606 OID 199930)
 -- Name: positions positions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22086,7 +22102,7 @@ ALTER TABLE ONLY public.positions
 
 
 --
--- TOC entry 3005 (class 2606 OID 18789)
+-- TOC entry 2156 (class 2606 OID 199932)
 -- Name: security_grades security_grades_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22095,7 +22111,7 @@ ALTER TABLE ONLY public.security_grades
 
 
 --
--- TOC entry 3008 (class 2606 OID 18791)
+-- TOC entry 2159 (class 2606 OID 199934)
 -- Name: system_migrations system_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22104,7 +22120,7 @@ ALTER TABLE ONLY public.system_migrations
 
 
 --
--- TOC entry 3013 (class 2606 OID 18793)
+-- TOC entry 2164 (class 2606 OID 199936)
 -- Name: travelers travelers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22113,7 +22129,7 @@ ALTER TABLE ONLY public.travelers
 
 
 --
--- TOC entry 3016 (class 2606 OID 18795)
+-- TOC entry 2167 (class 2606 OID 199938)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22122,7 +22138,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 2960 (class 1259 OID 18796)
+-- TOC entry 2111 (class 1259 OID 199939)
 -- Name: idx_audit_action; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22130,7 +22146,7 @@ CREATE INDEX idx_audit_action ON public.audit_logs USING btree (action);
 
 
 --
--- TOC entry 2961 (class 1259 OID 18797)
+-- TOC entry 2112 (class 1259 OID 199940)
 -- Name: idx_audit_created; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22138,7 +22154,7 @@ CREATE INDEX idx_audit_created ON public.audit_logs USING btree (created_at);
 
 
 --
--- TOC entry 2962 (class 1259 OID 18798)
+-- TOC entry 2113 (class 1259 OID 199941)
 -- Name: idx_audit_entity; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22146,7 +22162,7 @@ CREATE INDEX idx_audit_entity ON public.audit_logs USING btree (entity_type, ent
 
 
 --
--- TOC entry 2963 (class 1259 OID 18799)
+-- TOC entry 2114 (class 1259 OID 199942)
 -- Name: idx_audit_logs_action; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22154,7 +22170,7 @@ CREATE INDEX idx_audit_logs_action ON public.audit_logs USING btree (action);
 
 
 --
--- TOC entry 2964 (class 1259 OID 18800)
+-- TOC entry 2115 (class 1259 OID 199943)
 -- Name: idx_audit_logs_created_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22162,7 +22178,7 @@ CREATE INDEX idx_audit_logs_created_at ON public.audit_logs USING btree (created
 
 
 --
--- TOC entry 2965 (class 1259 OID 18801)
+-- TOC entry 2116 (class 1259 OID 199944)
 -- Name: idx_audit_logs_entity_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22170,7 +22186,7 @@ CREATE INDEX idx_audit_logs_entity_id ON public.audit_logs USING btree (entity_i
 
 
 --
--- TOC entry 2966 (class 1259 OID 18802)
+-- TOC entry 2117 (class 1259 OID 199945)
 -- Name: idx_audit_logs_entity_type; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22178,7 +22194,7 @@ CREATE INDEX idx_audit_logs_entity_type ON public.audit_logs USING btree (entity
 
 
 --
--- TOC entry 2967 (class 1259 OID 18803)
+-- TOC entry 2118 (class 1259 OID 199946)
 -- Name: idx_audit_user; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22186,7 +22202,7 @@ CREATE INDEX idx_audit_user ON public.audit_logs USING btree (user_id);
 
 
 --
--- TOC entry 2970 (class 1259 OID 18804)
+-- TOC entry 2121 (class 1259 OID 199947)
 -- Name: idx_awareness_date; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22194,7 +22210,7 @@ CREATE INDEX idx_awareness_date ON public.awareness_records USING btree (acquain
 
 
 --
--- TOC entry 2971 (class 1259 OID 18805)
+-- TOC entry 2122 (class 1259 OID 199948)
 -- Name: idx_awareness_document; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22202,7 +22218,7 @@ CREATE INDEX idx_awareness_document ON public.awareness_records USING btree (doc
 
 
 --
--- TOC entry 2972 (class 1259 OID 18806)
+-- TOC entry 2123 (class 1259 OID 199949)
 -- Name: idx_awareness_employee; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22210,7 +22226,7 @@ CREATE INDEX idx_awareness_employee ON public.awareness_records USING btree (emp
 
 
 --
--- TOC entry 2973 (class 1259 OID 18807)
+-- TOC entry 2124 (class 1259 OID 199950)
 -- Name: idx_awareness_traveler; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22218,7 +22234,7 @@ CREATE INDEX idx_awareness_traveler ON public.awareness_records USING btree (tra
 
 
 --
--- TOC entry 2976 (class 1259 OID 18808)
+-- TOC entry 2127 (class 1259 OID 199951)
 -- Name: idx_clearance_forms_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22226,7 +22242,7 @@ CREATE UNIQUE INDEX idx_clearance_forms_name ON public.clearance_forms USING btr
 
 
 --
--- TOC entry 2979 (class 1259 OID 18809)
+-- TOC entry 2130 (class 1259 OID 199952)
 -- Name: idx_departments_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22234,7 +22250,7 @@ CREATE UNIQUE INDEX idx_departments_name ON public.departments USING btree (name
 
 
 --
--- TOC entry 2982 (class 1259 OID 18810)
+-- TOC entry 2133 (class 1259 OID 199953)
 -- Name: idx_document_types_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22242,7 +22258,7 @@ CREATE UNIQUE INDEX idx_document_types_name ON public.document_types USING btree
 
 
 --
--- TOC entry 2985 (class 1259 OID 18811)
+-- TOC entry 2136 (class 1259 OID 199954)
 -- Name: idx_documents_date; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22250,7 +22266,7 @@ CREATE INDEX idx_documents_date ON public.documents USING btree (doc_date);
 
 
 --
--- TOC entry 2986 (class 1259 OID 18812)
+-- TOC entry 2137 (class 1259 OID 199955)
 -- Name: idx_documents_grade; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22258,7 +22274,7 @@ CREATE INDEX idx_documents_grade ON public.documents USING btree (security_grade
 
 
 --
--- TOC entry 2987 (class 1259 OID 18813)
+-- TOC entry 2138 (class 1259 OID 199956)
 -- Name: idx_documents_number; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22266,7 +22282,7 @@ CREATE INDEX idx_documents_number ON public.documents USING btree (number);
 
 
 --
--- TOC entry 2990 (class 1259 OID 18814)
+-- TOC entry 2141 (class 1259 OID 199957)
 -- Name: idx_employees_clearance; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22274,7 +22290,7 @@ CREATE INDEX idx_employees_clearance ON public.employees USING btree (clearance_
 
 
 --
--- TOC entry 2991 (class 1259 OID 18815)
+-- TOC entry 2142 (class 1259 OID 199958)
 -- Name: idx_employees_department; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22282,7 +22298,7 @@ CREATE INDEX idx_employees_department ON public.employees USING btree (departmen
 
 
 --
--- TOC entry 2992 (class 1259 OID 18816)
+-- TOC entry 2143 (class 1259 OID 199959)
 -- Name: idx_employees_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22290,7 +22306,7 @@ CREATE INDEX idx_employees_name ON public.employees USING btree (last_name, firs
 
 
 --
--- TOC entry 2993 (class 1259 OID 18817)
+-- TOC entry 2144 (class 1259 OID 199960)
 -- Name: idx_employees_status; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22298,7 +22314,7 @@ CREATE INDEX idx_employees_status ON public.employees USING btree (status);
 
 
 --
--- TOC entry 2994 (class 1259 OID 18818)
+-- TOC entry 2145 (class 1259 OID 199961)
 -- Name: idx_employees_uid; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22306,7 +22322,7 @@ CREATE UNIQUE INDEX idx_employees_uid ON public.employees USING btree (uid);
 
 
 --
--- TOC entry 2997 (class 1259 OID 18819)
+-- TOC entry 2148 (class 1259 OID 199962)
 -- Name: idx_organizations_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22314,7 +22330,7 @@ CREATE UNIQUE INDEX idx_organizations_name ON public.organizations USING btree (
 
 
 --
--- TOC entry 3000 (class 1259 OID 18820)
+-- TOC entry 2151 (class 1259 OID 199963)
 -- Name: idx_positions_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22322,7 +22338,7 @@ CREATE UNIQUE INDEX idx_positions_name ON public.positions USING btree (name);
 
 
 --
--- TOC entry 3003 (class 1259 OID 18821)
+-- TOC entry 2154 (class 1259 OID 199964)
 -- Name: idx_security_grades_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22330,7 +22346,7 @@ CREATE UNIQUE INDEX idx_security_grades_name ON public.security_grades USING btr
 
 
 --
--- TOC entry 3006 (class 1259 OID 18822)
+-- TOC entry 2157 (class 1259 OID 199965)
 -- Name: idx_system_migrations_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22338,7 +22354,7 @@ CREATE UNIQUE INDEX idx_system_migrations_name ON public.system_migrations USING
 
 
 --
--- TOC entry 3009 (class 1259 OID 18823)
+-- TOC entry 2160 (class 1259 OID 199966)
 -- Name: idx_travelers_archived; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22346,7 +22362,7 @@ CREATE INDEX idx_travelers_archived ON public.travelers USING btree (is_archived
 
 
 --
--- TOC entry 3010 (class 1259 OID 18824)
+-- TOC entry 2161 (class 1259 OID 199967)
 -- Name: idx_travelers_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22354,7 +22370,7 @@ CREATE INDEX idx_travelers_name ON public.travelers USING btree (last_name, firs
 
 
 --
--- TOC entry 3011 (class 1259 OID 18825)
+-- TOC entry 2162 (class 1259 OID 199968)
 -- Name: idx_travelers_org; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22362,7 +22378,7 @@ CREATE INDEX idx_travelers_org ON public.travelers USING btree (organization_id)
 
 
 --
--- TOC entry 3014 (class 1259 OID 18826)
+-- TOC entry 2165 (class 1259 OID 199969)
 -- Name: idx_users_login; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -22370,7 +22386,7 @@ CREATE UNIQUE INDEX idx_users_login ON public.users USING btree (login);
 
 
 --
--- TOC entry 3017 (class 2606 OID 18827)
+-- TOC entry 2168 (class 2606 OID 199970)
 -- Name: audit_logs fk_audit_logs_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22379,7 +22395,7 @@ ALTER TABLE ONLY public.audit_logs
 
 
 --
--- TOC entry 3018 (class 2606 OID 18832)
+-- TOC entry 2169 (class 2606 OID 199975)
 -- Name: awareness_records fk_awareness_records_created_by; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22388,7 +22404,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 3019 (class 2606 OID 18837)
+-- TOC entry 2170 (class 2606 OID 199980)
 -- Name: awareness_records fk_awareness_records_document; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22397,7 +22413,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 3020 (class 2606 OID 18842)
+-- TOC entry 2171 (class 2606 OID 199985)
 -- Name: awareness_records fk_awareness_records_employee; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22406,7 +22422,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 3021 (class 2606 OID 18847)
+-- TOC entry 2172 (class 2606 OID 199990)
 -- Name: awareness_records fk_awareness_records_traveler; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22415,7 +22431,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 3022 (class 2606 OID 18852)
+-- TOC entry 2173 (class 2606 OID 199995)
 -- Name: awareness_records fk_awareness_records_updated_by; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22424,7 +22440,7 @@ ALTER TABLE ONLY public.awareness_records
 
 
 --
--- TOC entry 3023 (class 2606 OID 18857)
+-- TOC entry 2174 (class 2606 OID 200000)
 -- Name: documents fk_documents_created_by; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22433,7 +22449,7 @@ ALTER TABLE ONLY public.documents
 
 
 --
--- TOC entry 3024 (class 2606 OID 18862)
+-- TOC entry 2175 (class 2606 OID 200005)
 -- Name: documents fk_documents_document_type; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22442,7 +22458,7 @@ ALTER TABLE ONLY public.documents
 
 
 --
--- TOC entry 3025 (class 2606 OID 18867)
+-- TOC entry 2176 (class 2606 OID 200010)
 -- Name: documents fk_documents_security_grade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22451,7 +22467,7 @@ ALTER TABLE ONLY public.documents
 
 
 --
--- TOC entry 3026 (class 2606 OID 18872)
+-- TOC entry 2177 (class 2606 OID 200015)
 -- Name: employees fk_employees_clearance_form; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22460,7 +22476,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 3027 (class 2606 OID 18877)
+-- TOC entry 2178 (class 2606 OID 200020)
 -- Name: employees fk_employees_department; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22469,7 +22485,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 3028 (class 2606 OID 18882)
+-- TOC entry 2179 (class 2606 OID 200025)
 -- Name: employees fk_employees_position; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22478,7 +22494,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 3029 (class 2606 OID 18887)
+-- TOC entry 2180 (class 2606 OID 200030)
 -- Name: travelers fk_travelers_clearance_form; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22487,7 +22503,7 @@ ALTER TABLE ONLY public.travelers
 
 
 --
--- TOC entry 3030 (class 2606 OID 18892)
+-- TOC entry 2181 (class 2606 OID 200035)
 -- Name: travelers fk_travelers_organization; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22496,7 +22512,7 @@ ALTER TABLE ONLY public.travelers
 
 
 --
--- TOC entry 3031 (class 2606 OID 18897)
+-- TOC entry 2182 (class 2606 OID 200040)
 -- Name: travelers fk_travelers_position; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -22504,11 +22520,9 @@ ALTER TABLE ONLY public.travelers
     ADD CONSTRAINT fk_travelers_position FOREIGN KEY (position_id) REFERENCES public.positions(id);
 
 
--- Completed on 2026-06-21 12:33:18
+-- Completed on 2026-06-21 13:11:51
 
 --
 -- PostgreSQL database dump complete
 --
-
-\unrestrict Q8c5RWj9XlduAodrb822eVOzYfAZ4xsEh05OjQDSvWZ5XvyPdgwD07phJdO5EDF
 

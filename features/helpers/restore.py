@@ -50,9 +50,11 @@ def restore_database():
 
     # 4. Восстанавливаем из plain SQL бэкапа (используем psql, не pg_restore)
     subprocess.run(
-        f'"{psql}" -h {DB_IP} -p {DB_PORT} -U postgres -d {DB_NAME} -f "{local_backup}"',
-        env=env, shell=True, check=True,
-        encoding='windows-1251'  # Декодировать вывод как WIN1251
+    f'"{psql}" -h {DB_IP} -p {DB_PORT} -U postgres -d {DB_NAME} -q -f "{local_backup}"',
+    env=env, shell=True, check=True,
+    capture_output=True,  # Перехватываем весь вывод psql
+    encoding='utf-8',
+    errors='replace'            # ← Заменяет нечитаемые символы, не падая
     )
 
 
